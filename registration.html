@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" />
+<title>Registration</title>
+
+
+<script type="text/javascript">
+	function validate() {
+		var n = document.getElementById("r-form").name;
+		if (n.value == "") {
+			alert("Please enter a name");
+			n.focus();
+			return false;
+
+		}
+
+		var e = document.getElementById("r-form").email;
+		var re = /\S+@\S+\.\S+/;
+		if (!re.test(e.value))
+			{
+			alert("Please enter valid email");
+			e.focus();
+			return false;
+			}
+			
+		var u = document.getElementById("r-form").username;
+		if (u.value == "") {
+			alert("Please enter a user name");
+			u.focus();
+			return false;
+
+		}
+		var p = document.getElementById("r-form").password;
+		if (p.value == "") {
+			alert("Please enter password");
+			p.focus();
+			return false;
+
+		}
+		return true;
+	}
+</script>
+
+</head>
+<body>
+
+	<div class="register">
+		<form name="register-form" id="r-form" action="rsuccess.html"
+			method="post" onSubmit="return(validate());">
+
+			<h3 class="lbutton">Register Here</h3>
+			<label class="label"><strong>Name</strong></label> <input name="name"
+				type="text" placeholder="Your Name" /> <br> <br> <label
+				class="label"><strong>Email</strong></label> <input name="email"
+				type="email" placeholder="someone@somemail.com" /> <br> <br>
+			<label><strong style="color: silver;">User name</strong></label> <input
+				name="username" type="text" placeholder="Username" /> <label><strong
+				style="color: silver;"><br></br>Password&nbsp;&nbsp;</strong></label> <input
+				name="password" type="password" placeholder="password"
+				class="input password" /> <br> <input type="submit"
+				value="Register" class="lbutton"></input> </a>
+
+
+		</form>
+	</div>
+
+</body>
+</html>

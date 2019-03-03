@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" media="screen">
+    
+    <script type="text/javascript">
+	function validate() {
+		var n = document.getElementById("feedback").name;
+		if (n.value == "") {
+			alert("Please enter a name");
+			n.focus();
+			return false;
+
+		}
+					
+		var g = document.getElementById("feedback").gadget;
+		if (g.value == "") {
+			alert("Please enter a gadget name");
+			g.focus();
+			return false;
+
+		}
+		var r = document.getElementById("feedback").rating;
+		var rating=document.getElementById("rating5");
+		if (r.value == "") {
+			alert("Please select a rating");
+			rating.focus();
+			return false;
+
+		}
+		
+		var t = document.getElementById("feedback").text;
+		if (t.value == "") {
+			alert("Please enter some text");
+			t.focus();
+			return false;
+
+		}
+		
+		
+		return true;
+	}
+</script>
+    
+    </head>
+    <header class="header">
+    <h1>Trend Blog</h1>
+    <h5 style="font-family: RockWell;">Get updated with new trends in Electronics</h5>
+    
+    </header>
+    
+<body>
+<div class="menu"> 
+	<ul>
+		<li class="menuitem"><a href="iPhone.html">iPhone-5s</a></li>
+			<li class="menuitem"><a href="moto.html">Moto-X</a></li>
+			<li class="menuitem"><a href="iwatch.html">Apple-iWatch</a></li>
+			<li class="menuitem"><a href="xperia.html">Xperia C3</a></li>
+			<li class="menuitem"><a href="selfi.html">Nokia Selfi</a></li>
+			<li class="menuitem"><a href="eluga.html">Panasonic Eluga U</a></li>
+		<li class="menuitem"><a href="feedback.html">Feedback</a></li>
+	</ul>
+	
+	
+</div>
+<div class="content">
+<div class="form">
+<h3 style="color: orange;">Feedback about Gadgets</h3>
+<p>Already had fun with Any trendy Gadget? Share your experience here. </p>
+
+<form id="feedback" action="thankyou.html" method="post" onsubmit="return(validate());" ><label style="color:BROWN;" ><b>Name:</b></label>
+    <input type="text" name="name" placeholder="Your name">
+    <br><br>
+    <label style="color: brown;"><b>Gadget:</b></label>
+    <input type="text" name="gadget" placeholder="Gadget Name"><br>
+    <label style="color:BROWN;"><b>Your Rating:</b></label>
+    <br>
+	&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="rating" id="rating5" value="5" style="cursor: pointer;"> 5 Stars<br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="rating" id="rating4" value="4" style="cursor: pointer;"> 4 Stars<br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="rating" id="rating3" value="3" style="cursor: pointer;"> 3 Stars<br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="rating" id="rating2" value="2" style="cursor: pointer;"> 2 Stars<br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="rating" id="rating1" value="1"style="cursor: pointer;"> 1 Star<br>
+	<br><label style="color:BROWN;"><b>Share with us:</b></label>
+   <br><br><textarea name="text" rows="10" cols="50" placeholder="What the fun you had :-)"></textarea>
+
+	<br><br><input type="submit" value="Post Feedback" style="cursor: pointer; color: BROWN;"  />
+</form>
+</div>
+</div>
+
+
+
+</body>
+</html>

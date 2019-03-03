@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function validate() {
+		var u=document.getElementById("login-form").username;
+			if(u.value==""){
+			alert("Please enter a user name");
+			u.focus();
+			return false;
+
+		}
+			var p=document.getElementById("login-form").password;
+			if(p.value==""){
+			alert("Please enter password");
+			p.focus();
+			return false;
+
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+
+	<div class="login">
+		<form name="login-form" id="login-form" action="Homepage.html"
+			method="post" onsubmit="return(validate());">
+
+			<h3 class="lbutton">Login Here</h3>
+			<label><strong style="color: silver;">User name :</strong></label> <input
+				name="username" type="text" placeholder="Username" /> <label><strong
+				style="color: silver;"><br></br>Password :&nbsp;&nbsp;</strong></label> <input
+				name="password" type="password" placeholder="password"
+				class="input password" /> <br> <input type="submit"
+				value="Login" class="lbutton"></input> <a href="registration.html">
+				<button type="button" style="cursor: pointer; color: blue;">Register
+					Here</button>
+			</a>
+		</form>
+
+	<img alt="iPhone5s.jpg" src="images/Welcome.jpg" height="100">
+	</div>
+
+</body>
+</html>
